@@ -1,0 +1,14 @@
+year,mean_AUC,std_AUC,n_test,note
+2006,0.7507,0.0065,160,ok
+2007,0.7224,0.044,68,ok
+2008,0.6842,0.0251,91,ok
+2009,0.6566,0.0044,206,ok
+2010,0.5894,0.0147,90,ok
+2011,0.6558,0.0856,48,ok
+2012,,,104,single_class
+2013,,,121,single_class
+2014,,,81,single_class
+2015,,,73,single_class
+2016,,,35,single_class
+2017,,,67,single_class
+2018,,,30,single_class

@@ -1,0 +1,5 @@
+Model,AUC,F1,Type
+DualBranchMDA Transformer (Exp 8),0.9457,0.8518,Deep Learning
+Random Forest (300 trees),0.9663104965430547,0.8732394366197183,Machine Learning
+FluSurver-style rule-based,0.4570458830923947,0.050505050505050504,Rule-based
+EVEscape-inspired (zero-shot),0.26590823381521056,0.009389671361502348,Zero-shot

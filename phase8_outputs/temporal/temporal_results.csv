@@ -1,0 +1,2 @@
+scenario,scenario_name,train_cutoff,test_period,n_train,n_test,AUC,F1,timing_MAE
+A,Conservative,2017,2019-2021,1873,30,,1.0,1209.58

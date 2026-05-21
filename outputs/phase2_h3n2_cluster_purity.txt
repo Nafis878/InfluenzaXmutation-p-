@@ -1,0 +1,11 @@
+H3N2 Cluster Purity Analysis
+Generated: 2026-05-22T01:08:46.196054
+==================================================
+Total sequences: 8,856
+Optimal K (best silhouette): 14
+Best silhouette score: 0.6653
+Correctly assigned (majority vote): 8,579
+Purity metric: 0.9687
+
+Success criteria: purity > 0.70
+Result: PASS

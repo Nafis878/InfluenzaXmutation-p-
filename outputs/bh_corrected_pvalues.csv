@@ -1,0 +1,5 @@
+test,statistic,p_raw,source,method,p_bh_adjusted,reject_H0_fdr05
+Critical-region enrichment (combined),1658.59,1e-300,phase3_variation_statistics.txt,chi-square,2e-300,True
+Critical-region enrichment (combined),9508.84,1e-300,phase3_variation_statistics.txt,chi-square,2e-300,True
+H1N1 divergence rate vs literature (2.45 aa/yr),0.8588,0.3904643813214659,phase1_h1n1_literature_comparison.txt,z-test (approximate),0.5206191750952879,False
+Koel position enrichment (Mann-Whitney U),,0.90804,external_validation_report.txt,Mann-Whitney U,0.90804,False

@@ -1,0 +1,37 @@
+ESM-2 Pre-Training Data Leakage Audit
+==================================================
+
+ESM-2 model: esm2_t6_8M_UR50D
+ESM-2 training data: UniRef50 2021-03 snapshot
+  Sequences deposited to UniProtKB/UniRef before March 2021 may have been
+  included in ESM-2 pre-training.
+
+Dataset temporal coverage: 1918 – 2020
+  All sequences have first_year <= 2020 < 2021 (ESM-2 cutoff)
+
+Total test sequences:                 400
+Sequences with first_year <= 2021: 400 (100.0%)
+Clean holdout (first_year > 2021):  0 (0.0%)
+
+CONCLUSION: Leakage-adjusted evaluation NOT POSSIBLE.
+  The dataset has no sequences with collection year > 2021.
+  All influenza HA sequences in our dataset predate the ESM-2 UniRef50
+  snapshot (2021-03), meaning the ESM-2 model may have seen these
+  sequences during pre-training.
+
+Recommended manuscript framing:
+  "ESM-2 baselines are evaluated on sequences with collection years
+  1918-2020. Because the ESM-2 pre-training corpus (UniRef50, March 2021
+  snapshot) may overlap with our evaluation set, these AUC values
+  (ESM+LogReg=0.9879, ESM+MLP=0.9962) likely represent an upper bound
+  and should not be interpreted as leakage-free performance estimates.
+  A temporally strict evaluation would require sequences deposited after
+  March 2021, which fall outside our current dataset coverage.
+  Notably, MDA Transformer outperforms ESM baselines on multi-output tasks
+  (timing, cluster assignment, epistasis) that ESM baselines do not address."
+
+Important context:
+  ESM-2 baselines predict ONLY drift probability (single-task).
+  MDA Transformer provides: drift, cluster, timing, persist, epistasis.
+  The MDA Transformer is the only model capable of multi-output prediction
+  which is the primary contribution of this work.

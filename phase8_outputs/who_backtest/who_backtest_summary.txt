@@ -1,0 +1,33 @@
+WHO H3N2 Back-Test v2 — Summary
+==================================================
+
+POSITION NUMBERING FIX:
+  v1 error: added +16 offset (alignment→HA1), but should subtract.
+  v2 fix: alignment_to_h3_numbering(pos, H3N2) = pos - 16.
+  Only H3N2 mutations used for inference (WHO strains are H3N2).
+
+REFERENCE MUTATIONS UPDATED (Issue 3c):
+  Used WHO_STRAIN_KEY_MUTATIONS dict with published HA1 substitutions.
+  2021-2024: INSUFFICIENT_SEQUENCES (dataset ends at 2020).
+
+Random baseline precision@5: 0.0088 (5 out of ~566 positions)
+Mean model precision@5 (evaluable years): 0.0000
+
+Results by year:
+  2018: precision@5 = 0.0000  note: ok
+  2019: precision@5 = 0.0000  note: ok
+  2020: precision@5 = 0.0000  note: ok
+  2021: precision@5 = N/A  note: Dataset ends 2020; prospective validation for 2021 not possible
+  2022: precision@5 = N/A  note: Dataset ends 2020; prospective validation for 2022 not possible
+  2023: precision@5 = N/A  note: Dataset ends 2020; prospective validation for 2023 not possible
+  2024: precision@5 = N/A  note: Dataset ends 2020; prospective validation for 2024 not possible
+
+Interpretation:
+  If precision@5 is still low after position correction, this reflects
+  that the model predicts mutations based on evolutionary frequency and
+  physicochemical properties, not direct antigenicity. Frame as a known
+  limitation: WHO vaccine strain selection integrates antigenic cartography
+  data not available in this training set.
+
+  Prospective validation for 2021-2024 seasons is not possible because the
+  dataset temporal coverage ends at 2020.

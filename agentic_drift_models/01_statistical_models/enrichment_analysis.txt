@@ -1,0 +1,19 @@
+=== Model 1: Chi-Square Enrichment Analysis ===
+Generated: 2026-05-20T00:04:15.204300
+
+Contingency Table:
+  Critical   + Drift   (A): 14
+  Critical   + No Drift(B): 1
+  Non-critical + Drift  (C): 9
+  Non-critical + No Drift(D): 6
+
+Chi-square statistic : 4.6584
+p-value              : 0.030902
+Degrees of freedom   : 1
+Cramér's V           : 0.3941
+Enrichment ratio     : 1.5556
+  (drift rate in critical    functions: 0.933)
+  (drift rate in non-critical functions: 0.600)
+
+SUCCESS CRITERIA: p < 0.05 AND enrichment > 1.5
+STATUS: PASS

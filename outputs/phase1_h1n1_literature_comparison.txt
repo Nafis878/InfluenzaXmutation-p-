@@ -1,0 +1,16 @@
+H1N1 Divergence Rate Analysis
+Generated: 2026-05-22T01:08:33.104563
+==================================================
+Reference sequence year: 2009 (pandemic H1N1)
+Method: weighted regression through origin on pandemic lineage
+Pandemic lineage filter: Hamming distance < 60 from 2009 reference
+Year range analysed: 2009 - 2017 (8 years)
+Initial mean distance: 4.6269
+Final mean distance:   16.5741
+
+Calculated rate (weighted slope): 2.5552 units/year
+Literature rate:  2.45 units/year
+Percent diff:     4.29%
+
+Success criteria: 2.20 - 2.70 units/year
+Result: PASS

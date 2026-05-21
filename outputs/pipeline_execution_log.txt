@@ -1,0 +1,98 @@
+============================================================
+Influenza Sequence Analysis Pipeline
+Phases to run: [1, 2, 3, 4, 5, 6]
+Input: C:\Users\UseR\Downloads\InfluenzaXmutation-p--\InfluenzaXmutation-p--main\final_fixed_influenza_ha_v2ok.csv
+Output: C:\Users\UseR\Downloads\InfluenzaXmutation-p--\InfluenzaXmutation-p--main\outputs
+============================================================
+
+============================================================
+Loading Data
+============================================================
+  [OK] Read 31,619 rows from C:\Users\UseR\Downloads\InfluenzaXmutation-p--\InfluenzaXmutation-p--main\final_fixed_influenza_ha_v2ok.csv
+  [OK] No null sequences found
+  [OK] Data loaded: 31,619 valid sequences  [0.2s]
+
+============================================================
+Phase 1: H1N1 Data Processing and Rate Analysis
+============================================================
+  [OK] 1.1  H1N1 sequences: 6,408
+  [OK] 1.2  Baseline statistics saved
+  [OK] 1.3  2009 pandemic reference length: 566 aa
+  [OK] 1.3  Divergence rates saved
+  [OK] 1.4  Rate = 2.5552 u/yr  |  Literature = 2.45  |  PASS
+  [OK] 1.5  Temporal trend plot saved
+
+  Phase 1 complete [0.6s]  Status: PASS
+
+============================================================
+Phase 2: H3N2 Clustering Against Historical Framework
+============================================================
+  [OK] 2.1  H3N2 sequences (mode length=566): 8,856
+  [OK] 2.2  Historical clusters assigned  (unique: 12)
+  [OK] 2.3  Silhouette scores saved  (best K=14, score=0.6653)
+  [OK] 2.4  Purity = 0.9687  |  PASS
+
+  Phase 2 complete [12.8s]  Status: PASS
+
+============================================================
+Phase 3: Sequence Variation Detection and Analysis
+============================================================
+  [OK] 3.1  References: H1N1 len=565, H3N2 len=566
+  [OK] 3.1  Variations detected: 1,356,303
+  [OK] 3.2  Variations annotated with region flags
+  [OK] 3.3  H3N2_enrich=1.657  p=0.00e+00  |  PASS
+  [OK] 3.4  Top 100 variations saved
+
+  Phase 3 complete [16.1s]  Status: PASS
+
+============================================================
+Phase 4: Spatial Mapping via Dimensionality Reduction
+============================================================
+  [OK] 4.1  H1N1: 33 representative sequences selected
+  [OK] 4.1  H3N2: 70 representative sequences selected
+  [OK] 4.2  Computing H1N1 distance matrix…
+  [OK] 4.2  H1N1 distance matrix saved
+  [OK] 4.2  Computing H3N2 distance matrix…
+  [OK] 4.2  H3N2 distance matrix saved
+  [OK] 4.3  MDS complete  stress=4.7172
+  [OK] 4.4  All three MDS plots saved
+
+  Phase 4 complete [1.9s]  Status: PASS
+
+============================================================
+Phase 5: Temporal Evolution Tracking
+============================================================
+  [OK] 5.1  Variant tracking table saved  (12 years)
+  [OK] 5.3  Variant emergence timeline plot saved
+  [OK] 5.4  Evolution analysis report saved
+
+  Phase 5 complete [0.3s]  Status: PASS
+
+============================================================
+Phase 6: Comprehensive Documentation
+============================================================
+  [OK] 6.1  PHASE_VALIDATION_SUMMARY.md written
+  [OK] 6.2  DATA_DICTIONARY.md written
+  [OK] 6.3  OUTPUT_INVENTORY.txt  (70 files listed)
+  [OK] 6.4  FINAL_STATUS.txt written
+
+VALIDATION FRAMEWORK - FINAL STATUS
+====================================
+Phase 1 (H1N1 Analysis):        [PASS]
+Phase 2 (H3N2 Clustering):      [PASS]
+Phase 3 (Variation Analysis):   [PASS]
+Phase 4 (Spatial Mapping):      [PASS]
+Phase 5 (Evolution Tracking):   [PASS]
+Phase 6 (Documentation):        [PASS]
+
+Overall Status: VALIDATED
+Total Files Generated: 70
+Output Directory: C:\Users\UseR\Downloads\InfluenzaXmutation-p--\InfluenzaXmutation-p--main\outputs/
+====================================
+
+  Phase 6 complete [0.0s]  Status: PASS
+
+============================================================
+Pipeline complete.  Total elapsed: 31.9s
+Output directory: C:\Users\UseR\Downloads\InfluenzaXmutation-p--\InfluenzaXmutation-p--main\outputs
+============================================================

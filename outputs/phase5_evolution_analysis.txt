@@ -1,0 +1,46 @@
+Temporal Evolution Analysis Report
+Generated: 2026-05-22T01:09:04.542162
+============================================================
+
+Analysis Period: 2009-2020 (H1N1 critical region variants)
+
+KEY FINDINGS
+------------
+Peak variant frequency: 11059.3% in 2017
+Lowest variant frequency: 0.0% in 2018
+Acceleration years (rapid increase): [2017]
+Plateau years (slow change): [2010, 2011, 2012, 2013, 2014, 2019, 2020]
+
+TEMPORAL PATTERN SUMMARY
+------------------------
+The analysis tracks the proportion of H1N1 sequences bearing amino acid
+variants at known antigenic/critical sites (positions 121-136 and 150-157).
+
+Acceleration events (years where year-over-year increase exceeded 1 std dev)
+may correspond to antigenic cluster transitions or pandemic-associated
+population-level sweeps observed in published influenza phylogenetics.
+
+Plateau periods reflect stabilisation of the circulating variant pool,
+often coinciding with strong immune selection having fixed a dominant
+genotype in the global population.
+
+BIOLOGICAL CONTEXT
+------------------
+H1N1 underwent a major lineage replacement in 2009 (pandemic strain).
+Post-pandemic diversification is expected to show progressive variant
+accumulation at receptor binding and antigenic sites, consistent with
+the immune-escape driven evolution documented in the literature.
+
+Year-by-year breakdown:
+  2009: 2207 sequences,  6947 critical variants (314.8%)
+  2010:  779 sequences,  3767 critical variants (483.6%)
+  2011:  575 sequences,  4000 critical variants (695.6%)
+  2012:  295 sequences,  3862 critical variants (1309.2%)
+  2013:  503 sequences,  4317 critical variants (858.2%)
+  2014:  301 sequences,  3173 critical variants (1054.2%)
+  2015:  173 sequences,  4699 critical variants (2716.2%)
+  2016:  395 sequences,  3679 critical variants (931.4%)
+  2017:   54 sequences,  5972 critical variants (11059.3%)
+  2018:    0 sequences,  3644 critical variants (0.0%)
+  2019:    0 sequences,  2634 critical variants (0.0%)
+  2020:    0 sequences,   258 critical variants (0.0%)

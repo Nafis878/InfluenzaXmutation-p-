@@ -1,0 +1,13 @@
+=== Model 8: Ensemble Performance ===
+Generated: 2026-05-20T00:04:17.308854
+
+Model agreement (all 4 agree): 76.7%
+Mean ensemble probability: 0.6495
+
+Confidence distribution:
+  HIGH: 17
+  NORMAL: 7
+  MEDIUM: 6
+
+SUCCESS CRITERIA: Agreement > 70%
+STATUS: PASS

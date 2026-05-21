@@ -1,0 +1,5 @@
+Model,AUC,Accuracy,F1,Precision,Recall,N_params
+Logistic Regression,0.8717,0.7025,0.7133,0.6435,0.8,8
+Random Forest,0.9635,0.885,0.8715,0.9017,0.8432,38388
+Rule-based (FluSurver),0.5035,0.54,0.0316,0.6,0.0162,0
+MDA Transformer,0.9457,0.75,0.8518,0.8495,0.8541,432211

@@ -1,0 +1,284 @@
+
+==============================================================
+ Step 1: Data Preparation
+==============================================================
+  Loading phase3_variations_annotated.csv … [0.0s]
+  Aggregating rows → unique mutations … [0.6s]
+  Unique mutations: 10,433 [1.1s]
+  Loading WHO/CDC antigenic labels … [1.1s]
+  Positive (drift=1): 1,735  |  Negative: 8,698  (balance=16.6%)
+  Stratified sampling to 2,000 balanced mutations … [1.1s]
+  Sampled 2,000  (drift=1: 1000, drift=0: 1000) [1.2s]
+  Splits: train=1200, val=400, test=400 [1.2s]
+✓ Step 1: Data preparation done  [1.2s]
+
+==============================================================
+ Step 2: DualBranchMDA Architecture
+==============================================================
+  DualBranchMDA instantiated  (534,550 params, CPU) [1.3s]
+✓ Step 2: Architecture done  [0.1s]
+
+==============================================================
+ Step 3: Training Setup
+==============================================================
+  AdamW lr=3e-4  CosineAnnealingWarmRestarts(T_0=40)  label_smooth=0.05 [2.8s]
+  Batches/epoch=38  grad_accum=2  augment=Gaussian(σ=0.02) [2.8s]
+✓ Step 3: Training setup done  [1.6s]
+
+==============================================================
+ Step 4: Training (150 epochs, batch=32, CPU)
+==============================================================
+  Epoch  1/150  loss=3.0313  val_AUC=0.8569  val_F1=0.7852  σ=[1.01 1.01 0.99 0.99]  [0.9s]
+  Epoch  2/150  loss=2.3787  [0.7s]
+  Epoch  3/150  loss=1.9842  [0.8s]
+  Epoch  4/150  loss=1.7465  [0.8s]
+  Epoch  5/150  loss=1.5550  val_AUC=0.9029  val_F1=0.8115  σ=[1.00 1.04 0.95 0.95]  [0.7s]
+  Epoch  6/150  loss=1.4336  [0.8s]
+  Epoch  7/150  loss=1.3211  [0.7s]
+  Epoch  8/150  loss=1.2362  [0.8s]
+  Epoch  9/150  loss=1.1763  [0.7s]
+  Epoch 10/150  loss=1.1334  val_AUC=0.9089  val_F1=0.8354  σ=[0.96 1.07 0.91 0.91]  [0.8s]
+  Epoch 11/150  loss=1.0622  [0.7s]
+  Epoch 12/150  loss=1.0170  [0.7s]
+  Epoch 13/150  loss=0.9289  [0.7s]
+  Epoch 14/150  loss=0.8824  [0.8s]
+  Epoch 15/150  loss=0.8225  val_AUC=0.9229  val_F1=0.8463  σ=[0.93 1.08 0.88 0.88]  [0.7s]
+  Epoch 16/150  loss=0.7710  [0.8s]
+  Epoch 17/150  loss=0.7603  [0.7s]
+  Epoch 18/150  loss=0.7081  [0.7s]
+  Epoch 19/150  loss=0.6747  [0.7s]
+  Epoch 20/150  loss=0.6257  val_AUC=0.9306  val_F1=0.8365  σ=[0.90 1.08 0.86 0.86]  [0.7s]
+  Epoch 21/150  loss=0.6350  [0.8s]
+  Epoch 22/150  loss=0.5942  [0.8s]
+  Epoch 23/150  loss=0.5410  [0.7s]
+  Epoch 24/150  loss=0.5637  [0.7s]
+  Epoch 25/150  loss=0.5076  val_AUC=0.9318  val_F1=0.8431  σ=[0.88 1.09 0.84 0.84]  [0.7s]
+  Epoch 26/150  loss=0.4990  [0.8s]
+  Epoch 27/150  loss=0.4706  [0.7s]
+  Epoch 28/150  loss=0.4429  [0.7s]
+  Epoch 29/150  loss=0.4549  [0.7s]
+  Epoch 30/150  loss=0.4150  val_AUC=0.9269  val_F1=0.8426  σ=[0.87 1.09 0.83 0.84]  [0.7s]
+  Epoch 31/150  loss=0.3967  [0.7s]
+  Epoch 32/150  loss=0.3935  [0.7s]
+  Epoch 33/150  loss=0.3934  [0.7s]
+  Epoch 34/150  loss=0.3963  [0.8s]
+  Epoch 35/150  loss=0.3605  val_AUC=0.9260  val_F1=0.8404  σ=[0.86 1.09 0.83 0.83]  [0.7s]
+  Epoch 36/150  loss=0.3600  [0.8s]
+  Epoch 37/150  loss=0.3427  [0.8s]
+  Epoch 38/150  loss=0.3259  [0.8s]
+  Epoch 39/150  loss=0.3224  [0.8s]
+  Epoch 40/150  loss=0.3300  val_AUC=0.9263  val_F1=0.8414  σ=[0.86 1.09 0.83 0.83]  [0.8s]
+  Epoch 41/150  loss=0.3966  [0.7s]
+  Epoch 42/150  loss=0.3886  [0.8s]
+  Epoch 43/150  loss=0.3463  [0.8s]
+  Epoch 44/150  loss=0.2804  [0.8s]
+  Epoch 45/150  loss=0.2350  val_AUC=0.9173  val_F1=0.8352  σ=[0.83 1.09 0.80 0.80]  [0.8s]
+  Epoch 46/150  loss=0.2136  [0.8s]
+  Epoch 47/150  loss=0.1658  [0.8s]
+  Epoch 48/150  loss=0.1241  [0.7s]
+  Epoch 49/150  loss=0.1060  [0.8s]
+  Epoch 50/150  loss=0.0868  val_AUC=0.8931  val_F1=0.8426  σ=[0.80 1.08 0.78 0.78]  [0.8s]
+  Epoch 51/150  loss=0.0456  [0.8s]
+  Epoch 52/150  loss=-0.0019  [0.7s]
+  Epoch 53/150  loss=-0.0513  [0.8s]
+  Epoch 54/150  loss=-0.0915  [0.8s]
+  Epoch 55/150  loss=-0.1250  val_AUC=0.8886  val_F1=0.8310  σ=[0.76 1.07 0.75 0.75]  [0.8s]
+  Epoch 56/150  loss=-0.1001  [0.7s]
+  Epoch 57/150  loss=-0.1361  [0.8s]
+  Epoch 58/150  loss=-0.1810  [0.8s]
+  Epoch 59/150  loss=-0.2188  [0.8s]
+  Epoch 60/150  loss=-0.2556  val_AUC=0.8943  val_F1=0.8518  σ=[0.74 1.05 0.73 0.73]  [0.8s]
+  Epoch 61/150  loss=-0.3096  [0.8s]
+  Epoch 62/150  loss=-0.3323  [0.8s]
+  Epoch 63/150  loss=-0.3580  [0.8s]
+  Epoch 64/150  loss=-0.3736  [0.8s]
+  Epoch 65/150  loss=-0.3963  val_AUC=0.8882  val_F1=0.8404  σ=[0.71 1.03 0.70 0.70]  [0.8s]
+  Epoch 66/150  loss=-0.4637  [0.8s]
+  Epoch 67/150  loss=-0.4712  [0.8s]
+  Epoch 68/150  loss=-0.5360  [0.8s]
+  Epoch 69/150  loss=-0.5518  [0.8s]
+  Epoch 70/150  loss=-0.5659  val_AUC=0.8784  val_F1=0.8393  σ=[0.68 1.01 0.68 0.68]  [0.8s]
+  Epoch 71/150  loss=-0.6069  [0.8s]
+  Epoch 72/150  loss=-0.5932  [0.8s]
+  Epoch 73/150  loss=-0.6791  [0.9s]
+  Epoch 74/150  loss=-0.6714  [0.8s]
+  Epoch 75/150  loss=-0.6860  val_AUC=0.8873  val_F1=0.8352  σ=[0.66 0.99 0.66 0.66]  [0.8s]
+  Epoch 76/150  loss=-0.7069  [0.8s]
+  Epoch 77/150  loss=-0.7634  [0.9s]
+  Epoch 78/150  loss=-0.7666  [0.8s]
+  Epoch 79/150  loss=-0.7843  [0.8s]
+  Epoch 80/150  loss=-0.7987  val_AUC=0.8818  val_F1=0.8386  σ=[0.64 0.97 0.64 0.64]  [0.8s]
+  Epoch 81/150  loss=-0.8074  [0.8s]
+  Epoch 82/150  loss=-0.8571  [0.8s]
+  Epoch 83/150  loss=-0.8697  [0.8s]
+  Epoch 84/150  loss=-0.8764  [0.8s]
+  Epoch 85/150  loss=-0.9041  val_AUC=0.8875  val_F1=0.8409  σ=[0.63 0.95 0.63 0.63]  [0.8s]
+  Epoch 86/150  loss=-0.9122  [0.8s]
+  Epoch 87/150  loss=-0.9245  [0.9s]
+  Epoch 88/150  loss=-0.9494  [0.8s]
+  Epoch 89/150  loss=-0.9480  [0.8s]
+  Epoch 90/150  loss=-0.9659  val_AUC=0.8864  val_F1=0.8409  σ=[0.62 0.93 0.62 0.62]  [0.8s]
+  Epoch 91/150  loss=-0.9917  [0.8s]
+  Epoch 92/150  loss=-1.0058  [0.8s]
+  Epoch 93/150  loss=-1.0223  [0.8s]
+  Epoch 94/150  loss=-1.0349  [0.8s]
+  Epoch 95/150  loss=-1.0462  val_AUC=0.8825  val_F1=0.8423  σ=[0.61 0.92 0.61 0.61]  [0.8s]
+  Epoch 96/150  loss=-1.0703  [0.7s]
+  Epoch 97/150  loss=-1.0573  [0.8s]
+  Epoch 98/150  loss=-1.0786  [0.8s]
+  Epoch 99/150  loss=-1.0852  [0.7s]
+  Epoch 100/150  loss=-1.0944  val_AUC=0.8913  val_F1=0.8433  σ=[0.61 0.91 0.60 0.61]  [0.7s]
+  Epoch 101/150  loss=-1.1012  [0.8s]
+  Epoch 102/150  loss=-1.0999  [0.8s]
+  Epoch 103/150  loss=-1.1118  [0.7s]
+  Epoch 104/150  loss=-1.1278  [0.8s]
+  Epoch 105/150  loss=-1.1370  val_AUC=0.8910  val_F1=0.8390  σ=[0.61 0.90 0.60 0.60]  [0.8s]
+  Epoch 106/150  loss=-1.1386  [0.7s]
+  Epoch 107/150  loss=-1.1315  [0.7s]
+  Epoch 108/150  loss=-1.1285  [0.8s]
+  Epoch 109/150  loss=-1.1452  [0.8s]
+  Epoch 110/150  loss=-1.1496  val_AUC=0.8894  val_F1=0.8428  σ=[0.60 0.90 0.60 0.60]  [0.7s]
+  Epoch 111/150  loss=-1.1515  [0.7s]
+  Epoch 112/150  loss=-1.1465  [0.7s]
+  Epoch 113/150  loss=-1.1651  [0.8s]
+  Epoch 114/150  loss=-1.1401  [0.8s]
+  Epoch 115/150  loss=-1.1478  val_AUC=0.8903  val_F1=0.8416  σ=[0.60 0.90 0.60 0.60]  [0.9s]
+  Epoch 116/150  loss=-1.1727  [1.0s]
+  Epoch 117/150  loss=-1.1665  [1.0s]
+  Epoch 118/150  loss=-1.1546  [1.0s]
+  Epoch 119/150  loss=-1.1613  [0.9s]
+  Epoch 120/150  loss=-1.1590  val_AUC=0.8914  val_F1=0.8421  σ=[0.60 0.90 0.60 0.60]  [1.0s]
+  Epoch 121/150  loss=-1.1344  [0.9s]
+  Epoch 122/150  loss=-1.0641  [0.9s]
+  Epoch 123/150  loss=-1.0880  [0.8s]
+  Epoch 124/150  loss=-1.1652  [0.8s]
+  Epoch 125/150  loss=-1.1696  val_AUC=0.8741  val_F1=0.8289  σ=[0.59 0.87 0.58 0.58]  [0.8s]
+  Epoch 126/150  loss=-1.1646  [0.8s]
+  Epoch 127/150  loss=-1.2009  [0.8s]
+  Epoch 128/150  loss=-1.2389  [0.8s]
+  Epoch 129/150  loss=-1.2332  [0.8s]
+  Epoch 130/150  loss=-1.2960  val_AUC=0.8854  val_F1=0.8238  σ=[0.58 0.85 0.56 0.56]  [0.8s]
+  Epoch 131/150  loss=-1.2750  [0.8s]
+  Epoch 132/150  loss=-1.2976  [0.7s]
+  Epoch 133/150  loss=-1.3604  [0.8s]
+  Epoch 134/150  loss=-1.3854  [0.8s]
+  Epoch 135/150  loss=-1.3892  val_AUC=0.8893  val_F1=0.8442  σ=[0.56 0.82 0.54 0.54]  [0.8s]
+  Epoch 136/150  loss=-1.4146  [0.7s]
+  Epoch 137/150  loss=-1.4348  [0.8s]
+  Epoch 138/150  loss=-1.4708  [0.8s]
+  Epoch 139/150  loss=-1.4925  [0.8s]
+  Epoch 140/150  loss=-1.5043  val_AUC=0.8916  val_F1=0.8294  σ=[0.55 0.79 0.52 0.53]  [0.8s]
+  Epoch 141/150  loss=-1.5415  [0.8s]
+  Epoch 142/150  loss=-1.5679  [0.8s]
+  Epoch 143/150  loss=-1.5672  [0.8s]
+  Epoch 144/150  loss=-1.6149  [0.8s]
+  Epoch 145/150  loss=-1.6295  val_AUC=0.9001  val_F1=0.8500  σ=[0.54 0.76 0.51 0.51]  [0.8s]
+  Epoch 146/150  loss=-1.6537  [0.8s]
+  Epoch 147/150  loss=-1.6802  [0.7s]
+  Epoch 148/150  loss=-1.7243  [0.7s]
+  Epoch 149/150  loss=-1.6987  [0.7s]
+  Epoch 150/150  loss=-1.7570  val_AUC=0.8956  val_F1=0.8446  σ=[0.54 0.74 0.49 0.49]  [0.7s]
+  Best model checkpoint saved [120.9s]
+✓ Step 4: Training done  best_val_AUC=0.9318  [118.1s]
+
+==============================================================
+ Step 5: Test Evaluation + Baseline Benchmark
+==============================================================
+  Computing optimal F1 threshold via TTA on validation set … [120.9s]
+  Optimal F1 threshold (val TTA n=10): 0.4057 [121.1s]
+  Running TTA inference on test set … [121.1s]
+
+  Training RF + XGBoost (same 16 features, same split) …
+  RF   AUC=0.9663 [0.950–0.978]  F1=0.8732  Acc=0.8875 [123.6s]
+  XGB  AUC=0.9708 [0.956–0.984]  F1=0.8877  Acc=0.8950 [124.7s]
+  MDA  AUC=0.9224 [0.897–0.945]  F1=0.8095  Acc=0.8200 [124.7s]
+  ΔAUC vs RF:  -0.0439   ΔF1 vs RF:  -0.0637
+  ΔAUC vs XGB: -0.0484   ΔF1 vs XGB: -0.0782
+  ✓ Test AUC=0.9224  F1=0.8095  Acc=0.8200  Prec=0.7927  Rec=0.8270
+✓ Step 5: Evaluation done  [3.8s]
+
+==============================================================
+ Step 6: Generate Predictions (all mutations)
+==============================================================
+  Scored 10,433 mutations [125.5s]
+✓ Step 6: Predictions done  [0.8s]
+
+==============================================================
+ Step 7: High-Impact Mutation Identification
+==============================================================
+  Identified 50 high-impact mutations (drift_prob > 0.65)
+
+  ✓ Top 10 Drift-Causing Mutations:
+   1. Pos 460: N→T  drift=0.953  cluster=10  timing=19d  fusion=0.946
+   2. Pos 376: T→V  drift=0.965  cluster=10  timing=22d  fusion=0.945
+   3. Pos 160: F→T  drift=0.971  cluster=10  timing=40d  fusion=0.944
+   4. Pos 381: D→G  drift=0.971  cluster=11  timing=379d  fusion=0.943
+   5. Pos 420: I→H  drift=0.964  cluster=11  timing=216d  fusion=0.942
+   6. Pos  27: N→G  drift=0.964  cluster=11  timing=390d  fusion=0.940
+   7. Pos 386: N→L  drift=0.964  cluster=11  timing=274d  fusion=0.939
+   8. Pos 111: F→Q  drift=0.953  cluster=10  timing=21d  fusion=0.939
+   9. Pos 492: C→G  drift=0.964  cluster=10  timing=20d  fusion=0.939
+  10. Pos 443: V→A  drift=0.977  cluster=11  timing=343d  fusion=0.938
+✓ Step 7: High-impact mutations done  [0.0s]
+
+==============================================================
+ Step 8: Predict Next Cluster Evolution
+==============================================================
+
+  Probability distribution across 15 clusters:
+  Cluster  0:   0.1%  █
+  Cluster  1:   0.2%  █
+  Cluster  2:   3.7%  █
+  Cluster  3:   3.1%  █
+  Cluster  4:   0.1%  █
+  Cluster  5:   0.1%  █
+  Cluster  6:   0.2%  █
+  Cluster  7:   0.1%  █
+  Cluster  8:   0.2%  █
+  Cluster  9:   0.2%  █
+  Cluster 10:   0.2%  █
+  Cluster 11:   0.4%  █
+  Cluster 12:  13.6%  ████
+  Cluster 13:  52.4%  █████████████████ ◄ most likely
+  Cluster 14:  25.3%  ████████
+
+  Most likely: Cluster 13 (52.4% confidence)
+✓ Step 8: Cluster forecast done  [0.0s]
+
+==============================================================
+ Step 9: Visualizations
+==============================================================
+  Plot 1: phase8_training_curves.png [125.8s]
+  Plot 2: phase8_benchmark_comparison.png [126.1s]
+  Plot 3: phase8_drift_prob_distribution.png [126.3s]
+  Plot 4: phase8_mutation_scatter.png [126.6s]
+  Plot 5: phase8_cluster_forecast.png [126.9s]
+  Plot 6: phase8_attention_analysis.png [127.2s]
+✓ Step 9: All visualisations saved at 300 dpi  [1.7s]
+
+==============================================================
+ Step 10: Final Report
+==============================================================
+  Saved phase8_mda_final_report.md [127.3s]
+✓ Step 10: Report done  [0.0s]
+
+==============================================================
+ DUALBRANCHMDA v2 — COMPLETE
+==============================================================
+  Total elapsed     : 127.3s (2.1 min)
+  Model parameters  : 534,550
+  Best val AUC      : 0.9318
+  ─── Test Results ─────────────────────────────
+  MDA v2   AUC=0.9224  F1=0.8095  Acc=0.8200
+  RF       AUC=0.9663  F1=0.8732  Acc=0.8875
+  XGBoost  AUC=0.9708  F1=0.8877  Acc=0.8950
+  ─── MDA Advantage ────────────────────────────
+  ΔAUC vs RF    : -0.0439
+  ΔF1  vs RF    : -0.0637
+  ΔAUC vs XGB   : -0.0484
+  ΔF1  vs XGB   : -0.0782
+  ─── Predictions ──────────────────────────────
+  High-impact muts  : 50
+  Predicted cluster : 13 (52.4%)
+  Output files      : 19 in C:\Users\UseR\Downloads\InfluenzaXmutation-p--\InfluenzaXmutation-p--main\phase8_outputs
+==============================================================

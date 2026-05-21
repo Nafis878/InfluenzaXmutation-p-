@@ -1,0 +1,24 @@
+Epistasis Label Method
+==================================================
+Method used: Fallback count ratio (primary)
+NPMI computation: 451 mutations (22.6%)
+Fallback count: 1,549 mutations (77.5%)
+Zero (no data): 0 mutations
+
+NPMI formula:
+  PMI(i,j)  = log[P(i,j) / (P(i)*P(j))]
+  NPMI(i,j) = PMI(i,j) / (-log P(i,j))
+  epistasis_label = mean NPMI of top-3 co-occurring neighbors within ±20 pos
+  Clipped to [0,1]
+
+Fallback condition: < 50 co-occurrence pair observations
+  Fallback formula: epistasis_label = (unique co-mutations within ±20) / 20
+
+Co-occurrence definition:
+  Mutations i and j co-occur if both appear in the same accession (sequence)
+  within the same year cohort (first_year of the training mutation)
+  Position window: ±20 residues in full HA alignment
+
+Label statistics:
+  min=0.0000, mean=0.6888
+  max=1.0000, non-zero=1929/2000

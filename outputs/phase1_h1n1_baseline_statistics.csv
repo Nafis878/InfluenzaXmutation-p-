@@ -1,0 +1,31 @@
+Metric,Value
+Count,6408.0
+Length_min,540.0
+Length_max,575.0
+Length_mean,564.7
+Length_median,566.0
+Length_std,4.3
+Year_min,1918.0
+Year_max,2017.0
+Host_Human,6083.0
+Host_Avian,325.0
+Country_USA,2227.0
+Country_China,468.0
+Country_India,344.0
+Country_Singapore,268.0
+Country_United Kingdom,264.0
+Country_Japan,251.0
+Country_Thailand,228.0
+Country_Canada,226.0
+Country_Taiwan,162.0
+Country_Finland,142.0
+Country_Iran,111.0
+Country_Russia,111.0
+Country_Brazil,101.0
+Country_Australia,100.0
+Country_Italy,78.0
+Country_Mexico,75.0
+Country_Netherlands,70.0
+Country_Nicaragua,62.0
+Country_Viet Nam,62.0
+Country_Hong Kong,62.0

@@ -1,0 +1,41 @@
+============================================================
+BOOTSTRAP CI AND BENJAMINI-HOCHBERG CORRECTION REPORT
+Generated: 2026-05-20T15:47:00.741815
+============================================================
+
+## Bootstrap Methodology
+  Resamples: n=1,000
+  CI level: 95% (α=0.05)
+  Strategy: stratified bootstrap (preserves class balance)
+  Implementation: numpy RandomState(42) for reproducibility
+
+## All Metrics with 95% CI
+Model                        Metric         Point   Lo95%   Hi95%   Width
+--------------------------------------------------------------------
+  MDA Transformer            AUC-ROC       0.9295  0.9040  0.9518  0.0478
+  MDA Transformer            Accuracy      0.8500  0.8149  0.8850  0.0701
+  MDA Transformer            F1            0.8361  0.7945  0.8737  0.0792
+  MDA Transformer            Precision     0.8453  0.7979  0.8929  0.0949
+  MDA Transformer            Recall        0.8270  0.7676  0.8758  0.1082
+  Logistic Regression        AUC-ROC       0.8717  0.8386  0.9022  0.0636
+  Logistic Regression        Accuracy      0.7025  0.6599  0.7450  0.0851
+  Logistic Regression        F1            0.7133  0.6733  0.7519  0.0786
+  Random Forest              AUC-ROC       0.9635  0.9470  0.9776  0.0306
+  Random Forest              Accuracy      0.8850  0.8525  0.9150  0.0625
+  Random Forest              F1            0.8715  0.8338  0.9056  0.0718
+  Rule-based (FluSurver)     AUC-ROC       0.5035  0.4934  0.5143  0.0209
+  Rule-based (FluSurver)     Accuracy      0.5400  0.5300  0.5500  0.0200
+  Rule-based (FluSurver)     F1            0.0316  0.0000  0.0718  0.0718
+
+## Benjamini-Hochberg FDR Correction (α=0.05)
+  Reference: Benjamini Y, Hochberg Y (1995). J R Stat Soc B 57:289-300.
+             doi:10.1111/j.2517-6161.1995.tb02031.x
+
+  Tests corrected: 4
+Test                                                        p_raw       p_BH   Reject
+----------------------------------------------------------------------------------------
+  Critical-region enrichment (combined)                1.000e-300 2.000e-300      YES
+  Critical-region enrichment (combined)                1.000e-300 2.000e-300      YES
+  H1N1 divergence rate vs literature (2.45 aa/yr)       3.905e-01  5.206e-01       NO
+  Koel position enrichment (Mann-Whitney U)             9.080e-01  9.080e-01       NO
+============================================================

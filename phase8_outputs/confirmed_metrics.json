@@ -1,0 +1,45 @@
+{
+  "drift_probability": {
+    "AUC": 0.9224,
+    "F1": 0.8095,
+    "CI_95": [
+      0.8974,
+      0.9446
+    ]
+  },
+  "antigenic_cluster": {
+    "MacroF1": 0.3384,
+    "ARI": 0.5195
+  },
+  "drift_timing": {
+    "MAE_days": 117.69,
+    "SpearmanRho": 0.8156
+  },
+  "epistasis": {
+    "spearman_rho": 0.4403,
+    "spearman_pval": 2.1363987425646442e-20,
+    "mse": 0.134,
+    "label_method": "fallback_count_ratio",
+    "label_method_details": "See outputs/epistasis_label_method.txt",
+    "n_npmi": 451,
+    "n_fallback": 1549
+  },
+  "dataset_info": {
+    "total_sequences": 31619,
+    "H1N1_count": 6408,
+    "H3N2_count": 9648,
+    "year_range": [
+      1902,
+      2020
+    ]
+  },
+  "model_v2": {
+    "checkpoint": "phase8_mda_model_best_v2.pt",
+    "n_params": 546968,
+    "n_heads": 5,
+    "val_auc_v2": 0.9272,
+    "test_auc_v2": 0.9201,
+    "test_f1_v2": 0.8256,
+    "timing_mae_v2": 122.5
+  }
+}

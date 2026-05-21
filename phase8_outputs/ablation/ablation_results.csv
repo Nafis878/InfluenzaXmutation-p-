@@ -1,0 +1,16 @@
+ablation_id,description,seed,test_AUC,delta_AUC,train_time_sec
+A1,No cross-attention (identity fusion),42,0.8892,-0.0332,116.3
+A1,No cross-attention (identity fusion),43,0.8769,-0.0455,111.0
+A1,No cross-attention (identity fusion),44,0.9197,-0.0027,103.8
+A2,Single-task (drift BCE only),42,0.8685,-0.0539,104.1
+A2,Single-task (drift BCE only),43,0.8315,-0.0909,106.1
+A2,Single-task (drift BCE only),44,0.8836,-0.0388,103.2
+A3,No continuous feature projection,42,0.8415,-0.0809,97.9
+A3,No continuous feature projection,43,0.8193,-0.1031,98.1
+A3,No continuous feature projection,44,0.8194,-0.103,98.4
+A4,No LayerNorm in embedding module,42,0.9018,-0.0206,108.5
+A4,No LayerNorm in embedding module,43,0.8707,-0.0517,109.2
+A4,No LayerNorm in embedding module,44,0.9006,-0.0218,130.4
+A5,No Transformer Encoder (identity),42,0.9094,-0.013,55.3
+A5,No Transformer Encoder (identity),43,0.9127,-0.0097,55.5
+A5,No Transformer Encoder (identity),44,0.913,-0.0094,55.5

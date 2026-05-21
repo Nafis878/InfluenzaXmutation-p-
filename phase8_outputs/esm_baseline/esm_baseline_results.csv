@@ -1,0 +1,4 @@
+model,AUC,F1,Params,type
+MDA Transformer (full),0.9224,0.8095,534550,mda
+ESM + Logistic Regression (fair-esm:esm2_t6_8M_UR50D),0.9879,0.9396,641,esm_lr
+"ESM + MLP (hidden=256, dropout=0.2) (fair-esm:esm2_t6_8M_UR50D)",0.9962,0.9783,82433,esm_mlp

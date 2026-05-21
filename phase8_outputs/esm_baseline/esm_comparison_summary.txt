@@ -1,0 +1,22 @@
+ESM Baseline Comparison — Summary
+==================================================
+ESM model used: fair-esm:esm2_t6_8M_UR50D
+Embedding dimension: 320
+Note: Used fair-esm library with esm2_t6_8M_UR50D
+
+Results on held-out test set:
+  Model                                                   AUC       F1       Params
+  ────────────────────────────────────────────────── ──────── ──────── ────────────
+  MDA Transformer (full)                               0.9224   0.8095      534,550
+  ESM + Logistic Regression (fair-esm:esm2_t6_8M_UR50D)   0.9879   0.9396          641
+  ESM + MLP (hidden=256, dropout=0.2) (fair-esm:esm2_t6_8M_UR50D)   0.9962   0.9783       82,433
+
+MDA vs ESM+LogReg ΔAUC = -0.0655
+MDA vs ESM+MLP    ΔAUC = -0.0738
+
+Interpretation:
+  The MDA Transformer underperforms ESM+LogReg by 0.0655 AUC,
+  and underperforms ESM+MLP by 0.0738 AUC.
+  ESM embeddings capture global sequence context but MDA uses mutation-level
+  physicochemical features with structural-context information (critical/binding region flags),
+  which may be more informative for mutation-level drift prediction.

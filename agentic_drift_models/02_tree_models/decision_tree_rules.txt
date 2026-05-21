@@ -1,0 +1,20 @@
+=== Model 4: Decision Tree — Feature Importance & Rules ===
+Generated: 2026-05-20T00:04:15.218216
+
+Feature Importances:
+  behavioral_distance: 1.0000
+  in_critical_function: 0.0000
+  version_number: 0.0000
+  code_churn: 0.0000
+  test_coverage: 0.0000
+
+--- Decision Rules ---
+|--- behavioral_distance <= 0.14
+|   |--- class: 0
+|--- behavioral_distance >  0.14
+|   |--- class: 1
+
+
+Key Monitoring Rules:
+  if behavioral_distance > 0.15 AND in_critical_function == 1 => HIGH DRIFT RISK
+  if test_coverage < 0.65 AND code_churn > 200 => ELEVATED RISK

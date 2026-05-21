@@ -1,0 +1,11 @@
+group,dropped_cols,n_dropped,auc_ablated,auc_lo,auc_hi,f1_ablated,delta_auc,delta_f1
+"Phase 2: Temporal clustering
+(year, days, era signal)","year_norm, days_norm",2,0.9079,0.8783,0.9396,0.8202,-0.0584,-0.053
+"Phase 5: Evolutionary persistence
+(frequency, persistence years)","freq_norm, n_years_norm",2,0.9385,0.9158,0.9577,0.8319,-0.0278,-0.0413
+"Phase 4: Drift era intensity
+(MDS-derived drift signal)",drift_inten,1,0.9581,0.9405,0.9733,0.8627,-0.0082,-0.0105
+"Phase 1: Structural
+(position, critical/binding flags)","position_norm, crit_flag, bind_flag",3,0.9659,0.9493,0.9789,0.8852,-0.0004,0.0119
+"Phase 3: Mutation biochemistry
+(hydrophobicity, volume, charge)","ref_hydro, var_hydro, hydro_delta, ref_vol, var_vol, vol_delta, charge_chg, polar_chg",8,0.9698,0.9558,0.9818,0.8876,0.0035,0.0144

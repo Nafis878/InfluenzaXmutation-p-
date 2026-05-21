@@ -1,0 +1,15 @@
+model,metric,point,ci_lo95,ci_hi95,ci_width
+MDA Transformer,AUC-ROC,0.9295,0.904,0.9518,0.0478
+MDA Transformer,Accuracy,0.85,0.8149,0.885,0.0701
+MDA Transformer,F1,0.8361,0.7945,0.8737,0.0792
+MDA Transformer,Precision,0.8453,0.7979,0.8929,0.0949
+MDA Transformer,Recall,0.827,0.7676,0.8758,0.1082
+Logistic Regression,AUC-ROC,0.8717,0.8386,0.9022,0.0636
+Logistic Regression,Accuracy,0.7025,0.6599,0.745,0.0851
+Logistic Regression,F1,0.7133,0.6733,0.7519,0.0786
+Random Forest,AUC-ROC,0.9635,0.947,0.9776,0.0306
+Random Forest,Accuracy,0.885,0.8525,0.915,0.0625
+Random Forest,F1,0.8715,0.8338,0.9056,0.0718
+Rule-based (FluSurver),AUC-ROC,0.5035,0.4934,0.5143,0.0209
+Rule-based (FluSurver),Accuracy,0.54,0.53,0.55,0.02
+Rule-based (FluSurver),F1,0.0316,0.0,0.0718,0.0718

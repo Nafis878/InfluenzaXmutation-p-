@@ -1,0 +1,30 @@
+Variation Statistical Analysis
+Generated: 2026-05-22T01:09:02.115773
+==================================================
+Total variation events: 1,356,303
+  In critical regions:     63,161
+  Not in critical regions: 1,293,142
+
+--- H1N1 critical region analysis ---
+  Critical positions: 24  (0-based 120-135, 149-156)
+  Critical events: 24,250
+  Critical density:     0.157681
+  Non-critical density: 0.205559
+  Enrichment ratio: 0.7671
+  chi2=1658.59  p=0.00e+00
+
+--- H3N2 critical region analysis ---
+  Critical positions: 22  (0-based 121-136, 154-159)
+  Critical events: 38,911
+  Critical density:     0.199716
+  Non-critical density: 0.120499
+  Enrichment ratio: 1.6574
+  chi2=9508.84  p=0.00e+00
+
+--- Combined result ---
+Max enrichment ratio: 1.6574
+Min p-value:          0.00e+00
+Cramer's V (H3N2):    0.1239
+
+Success criteria: p < 0.05 AND max enrichment_ratio > 1.20
+Result: PASS

@@ -1,0 +1,24 @@
+=== Model 3: Logistic Regression Performance ===
+Generated: 2026-05-20T00:04:15.216420
+
+Features: behavioral_distance, in_critical_function, version_number, code_churn, test_coverage
+Train/Test split: 24/6
+
+AUC-ROC  : 1.0000
+Precision: 1.0000
+Recall   : 1.0000
+F1 Score : 1.0000
+
+Confusion Matrix:
+[[1 0]
+ [0 5]]
+
+Coefficients (standardized):
+  behavioral_distance: 0.9965
+  in_critical_function: 0.0752
+  version_number: 0.9709
+  code_churn: 0.8085
+  test_coverage: -0.6076
+
+SUCCESS CRITERIA: AUC > 0.80
+STATUS: PASS (AUC=1.0000)

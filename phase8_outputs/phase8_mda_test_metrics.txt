@@ -1,0 +1,23 @@
+=== Phase 8 v2: DualBranchMDA — Test Metrics ===
+Generated: 2026-05-22T01:11:24.155194
+
+AUC-ROC    : 0.9224
+AUC 95%CI  : [0.8974, 0.9446]  [PASS]
+Accuracy   : 0.8200
+Precision  : 0.7927
+Recall     : 0.8270
+F1-Score   : 0.8095
+F1 95%CI   : [0.7650, 0.8486]
+
+Confusion Matrix:
+  TN=175  FP=40
+  FN=32  TP=153
+
+--- Benchmark (same 16 features + split) ---
+  MDA Transformer v2          : AUC=0.9224 [0.8974–0.9446]  F1=0.8095 [0.7650–0.8486]
+  Random Forest (300 trees)   : AUC=0.9663 [0.9503–0.9784]  F1=0.8732 [0.8527–0.9191]
+  XGBoost (200 est)           : AUC=0.9708 [0.9558–0.9836]  F1=0.8877 [0.8494–0.9210]
+
+Best val AUC: 0.9318
+Training time: 118.1s
+Model params: 534,550

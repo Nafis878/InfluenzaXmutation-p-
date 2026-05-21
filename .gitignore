@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Large raw data files (too large for GitHub or regenerable)
+final_fixed_influenza_ha_v2ok.csv
+outputs/phase3_variations_annotated.csv
+outputs/phase3_variations_detected.csv
+outputs/phase2_h3n2_filtered.csv
+outputs/phase2_h3n2_historical_clusters.csv
+outputs/phase1_h1n1_filtered.csv
+outputs/sequence_accession_list.txt
+
+# Regenerable caches
+phase8_outputs/esm_baseline/esm_embeddings_cache.pt
+
+# IDE/tool metadata
+.claude/

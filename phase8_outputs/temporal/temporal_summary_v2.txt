@@ -1,0 +1,19 @@
+Temporal Generalization v2 — Summary
+==================================================
+Generated: 2026-05-22
+
+SPLIT RATIONALE:
+  Original splits (2019-2021 / 2021+) failed due to data sparsity.
+  Corrected splits use years with >= 100 mutations in test window.
+  See outputs/temporal/split_rationale.txt for full rationale.
+
+Scenario Results:
+  Scenario A (Conservative): train_cutoff=2006, test=2006-2009, n_train=796, n_test=525, AUC=0.6443, F1=0.4659, timing_MAE=18.48
+  Scenario B (Standard): train_cutoff=2010, test=2010+, n_train=1321, n_test=679, AUC=0.5978, F1=0.4971, timing_MAE=1695.22
+
+Year-by-year AUC curve: 6 of 13 candidate years evaluated
+Years with sufficient data (n_test >= 30): [np.int64(2006), np.int64(2007), np.int64(2008), np.int64(2009), np.int64(2010), np.int64(2011)]
+
+Key finding:
+  Temporal generalization is feasible with properly stratified splits.
+  AUC degradation with temporal holdout reflects genuine generalization challenge.

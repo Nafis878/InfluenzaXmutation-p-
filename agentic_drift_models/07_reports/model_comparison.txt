@@ -1,0 +1,15 @@
+=== Model Comparison Report ===
+Generated: 2026-05-20T00:04:19.204338
+
+Model                          Metric                      Value   Status
+--------------------------------------------------------------------------
+M1: Chi-Square Enrichment      enrichment_ratio           1.5556     PASS
+M1: Chi-Square Enrichment      p_value                  0.030902     PASS
+M3: Logistic Regression        AUC-ROC                    1.0000     PASS
+M3: Logistic Regression        F1-Score                   1.0000         
+M6: ARIMA Forecast             MAPE (%)                     2.69     PASS
+M8: Ensemble                   Model agreement (%)          76.7     PASS
+
+Best performing model: Ensemble (M8) — combines all signals
+Most interpretable model: Decision Tree (M4)
+Best for early warning: ARIMA forecast (M6) + Transformer (M7)

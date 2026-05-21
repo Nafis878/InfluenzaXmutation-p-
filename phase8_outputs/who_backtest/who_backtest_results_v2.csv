@@ -1,0 +1,8 @@
+year,who_strain,top5_predicted_mutations_ha1,known_who_mutations,precision_at_5,overlap_count,note
+2018,A/Singapore/INFIMH-16-0019/2016,N170M|K511Q|N132H|G141N|R207N,L3I|N121K|N171K|R142G|T131K,0.0,0.0,
+2019,A/Kansas/14/2017,S114P|R382L|R452T|T275M|G48V,I192T|N171K|Q197H|R142G|T131K,0.0,0.0,
+2020,A/Guangdong-Maonan/SWL1536/2019,N172P|N340H|H55Q|A429G|D374E,H156Q|N171K|R142G|T131K|T135I,0.0,0.0,
+2021,A/Cambodia/e0826360/2020,N/A,INSUFFICIENT_SEQUENCES,,,Dataset ends 2020; prospective validation for 2021 not possible
+2022,A/Darwin/6/2021,N/A,INSUFFICIENT_SEQUENCES,,,Dataset ends 2020; prospective validation for 2022 not possible
+2023,A/Darwin/9/2021,N/A,INSUFFICIENT_SEQUENCES,,,Dataset ends 2020; prospective validation for 2023 not possible
+2024,A/Thailand/8/2022,N/A,INSUFFICIENT_SEQUENCES,,,Dataset ends 2020; prospective validation for 2024 not possible

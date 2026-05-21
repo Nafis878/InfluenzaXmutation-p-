@@ -1,0 +1,8 @@
+year,who_strain,top5_predicted_mutations,known_who_mutations,precision_at_5,overlap_count,note
+2018,A/Singapore/INFIMH-16-0019/2016,N186M|K527Q|N148H|G157N|K42Q,T160K|N121K|K92R|S193I,0.0,0.0,
+2019,A/Kansas/14/2017,S130P|R398L|R468T|T291M|G64V,T160K|K92R|N121K|T131K|S193F,0.0,0.0,
+2020,A/Guangdong-Maonan/SWL1536/2019,N188P|N356H|H71Q|A445G|D390E,T160K|N121D|T131I|I192T|K92R,0.0,0.0,
+2021,A/Cambodia/e0826360/2020,INSUFFICIENT_DATA,"[('T', 160, 'K'), ('T', 131, 'K'), ('N', 137, 'S'), ('I', 192, 'T'), ('E', 156, 'G')]",,,Only 0 mutations found for year 2021
+2022,A/Darwin/6/2021,INSUFFICIENT_DATA,[REQUIRES_LOOKUP],,,Only 0 mutations found for year 2022
+2023,A/Darwin/9/2021,INSUFFICIENT_DATA,[REQUIRES_LOOKUP],,,Only 0 mutations found for year 2023
+2024,A/Thailand/8/2022,INSUFFICIENT_DATA,[REQUIRES_LOOKUP],,,Only 0 mutations found for year 2024

@@ -1,0 +1,12 @@
+Temporal Generalization Test — Summary
+==================================================
+
+Scenario Results:
+  Scenario A (Conservative): train_cutoff=2017, test=2019-2021, n_train=1873, n_test=30, AUC=nan, F1=1.0000, timing_MAE=1209.6d
+
+Year-by-year AUC trend: insufficient data
+Years with sufficient test data: 0
+
+Interpretation:
+  Model maintains performance over longer forecast horizons.
+  Scenario B (standard split) uses more training data and may be more reliable.

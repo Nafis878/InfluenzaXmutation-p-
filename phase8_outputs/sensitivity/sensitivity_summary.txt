@@ -1,0 +1,16 @@
+Loss Weight Sensitivity Analysis — Summary
+==================================================
+Baseline weights: [0.4, 0.25, 0.15, 0.15, 0.05]
+Baseline val AUC: 0.8941
+
+Largest AUC DROP:  w_drift_plus0.10  ΔAUC=-0.0132  (val_AUC=0.8809)
+Largest AUC GAIN:  w_cluster_plus0.10   ΔAUC=+0.0064  (val_AUC=0.9005)
+Variance across 11 configs: 0.000026
+Std dev:  0.0051
+Range:    [0.8809, 0.9005]
+
+Conclusion:
+  The baseline weighting is robust: AUC variance = 0.0051 across 11 weight configurations
+  (range: 0.8809-0.9005), confirming robustness of the baseline weighting scheme.
+  The drift probability weight (w_drift=0.40) is the most sensitive parameter: increasing it
+  by 0.10 causes the largest AUC drop (DELTA_AUC=-0.0132, config w_drift_plus0.10).
