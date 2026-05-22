@@ -1,0 +1,35 @@
+HI-Cartography-Informed WHO Backtest — Summary
+==================================================
+
+METHOD:
+  HI_distance(m) = 0.40*I(p∈Koel_sites)
+                 + 0.20*B_factor_norm[p]
+                 + 0.25*(1-Conservation[p])
+                 + 0.15*Escape_lit[p]
+
+  F_HI = 0.50*HI_distance + 0.30*P_drift
+       + 0.10*(1-timing_norm) + 0.10*E_epistasis
+
+KOEL ET AL. SITES (H3N2 HA1): [155, 156, 158, 189, 193]
+
+RESULTS BY YEAR:
+  2018: HI=0.0000  freq_baseline=0.0000  n_H3N2=30
+  2019: HI=0.0000  freq_baseline=0.0000  n_H3N2=25
+  2020: HI=0.0000  freq_baseline=0.0000  n_H3N2=5
+
+MEAN precision@5 (HI-informed):   0.0000
+MEAN precision@5 (freq baseline):  0.0000
+Random baseline:                   0.0088
+Fold improvement vs random:        0.0x
+
+BIOLOGICAL NOTE:
+  NEGATIVE RESULT: Mean precision@5 = 0.0000 < 0.15.
+  The HI-cartography-informed fusion score did not improve WHO back-test
+  precision above chance. This suggests that mutation ranking by any
+  sequence-based method remains fundamentally limited without direct
+  antigenicity measurement (HI titer assays).
+  ROOT CAUSE: The 2000-mutation dataset has sparse H3N2 coverage in
+  2018–2020 (n=30/25/5). The recurring sweep mutations (T131K, R142G,
+  N171K) likely have first_year < 2018 and are absent from inference
+  pools. HI scoring cannot surface mutations not in the pool.
+  RECOMMENDATION: Frame as known limitation in Section 11 as planned.

@@ -1,0 +1,30 @@
+HI Backtest Validation Log
+==================================================
+
+1. Koel et al. position encoding:
+   HA1 sites: [155, 156, 158, 189, 193]
+   Alignment sites (HA1 + 16): [171, 172, 174, 205, 209]
+   Expected alignment: {171, 172, 174, 205, 209}
+   Match: True
+
+2. B-factor normalization:
+   Source: PDB 4FQI download
+   Range: [0.0000, 1.0000]
+   In [0,1]: True
+
+3. Entropy normalization:
+   Range: [-0.0000, 0.5974]
+   Max theoretical (log20): 2.9957
+   All normalized in [0,1]: False
+
+4. WHO reference mutations (same dict as who_backtest_v2.py):
+   2018: ['L3I', 'N121K', 'N171K', 'R142G', 'T131K']
+   2019: ['I192T', 'N171K', 'Q197H', 'R142G', 'T131K']
+   2020: ['H156Q', 'N171K', 'R142G', 'T131K', 'T135I']
+
+5. Position conversion check:
+   alignment_to_h3_numbering(187, H3N2) = 171 (expected N171K position)
+   Result: 171
+
+6. v2 model epistasis source: phase8_outputs/phase8_mda_model_best_v2.pt
+   v2 model loaded: 83/83 keys matched

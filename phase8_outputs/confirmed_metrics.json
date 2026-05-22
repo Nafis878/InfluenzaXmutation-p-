@@ -41,5 +41,19 @@
     "test_auc_v2": 0.9201,
     "test_f1_v2": 0.8256,
     "timing_mae_v2": 122.5
+  },
+  "hi_backtest": {
+    "mean_precision_at_5": 0.0,
+    "mean_precision_freq_base": 0.0,
+    "random_baseline": 0.0088,
+    "fold_vs_random": 0.0,
+    "success_criterion_met": false,
+    "years_evaluated": [2018, 2019, 2020],
+    "precision_per_year": {
+      "2018": 0.0,
+      "2019": 0.0,
+      "2020": 0.0
+    },
+    "negative_result_reason": "WHO reference mutations (T131K, R142G, N171K) have first_year < 2018 and are absent from per-year inference pools; HI scoring cannot surface mutations not in the pool"
   }
 }
